@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | MindMetrics</title>
+  <meta name="description" content="What MindMetrics is, how the score works and what it is built with.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>About MindMetrics</h1>
+      <p class="lead">A small, honest tool that helps students notice stress early and study in a more balanced way.</p>
+    </div>
+  </section>
+    <div class="container page-content">
+      <div class="about-grid">
+        <section class="card">
+          <h2>Why we built it</h2>
+          <p>Deadlines, labs and new routines pile up fast in first year. Most of us only notice the stress once it has already won.</p>
+          <p>MindMetrics turns a vague feeling into a number you can watch. Once you can see a pattern, such as short sleep before heavy weeks, you can plan around it.</p>
+        </section>
+        <section class="card">
+          <h2>How the score works</h2>
+          <p>Each check-in becomes a 0–100 stress score. Lower is better.</p>
+          <ul class="bullets">
+            <li>Stress level counts for up to 30 points</li>
+            <li>Mood up to 20, and sleep up to 20 (8 hours or more adds nothing)</li>
+            <li>Workload and low energy up to 15 each</li>
+            <li>Exercise subtracts up to 5 (30 minutes earns the full amount)</li>
+            <li>Below 34 is Low, 34 to 66 is Moderate, 67 and above is High</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Built with</h2>
+          <ul class="bullets">
+            <li><strong>HTML5</strong> semantic pages with labelled forms</li>
+            <li><strong>CSS3</strong> custom properties, Grid, Flexbox and media queries</li>
+            <li><strong>JavaScript (ES6+)</strong> modules of small functions, no frameworks</li>
+            <li><strong>localStorage</strong> to keep your data in your browser</li>
+            <li><strong>GitHub Pages</strong> for hosting</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Good to know</h2>
+          <p>This is a front-end project, so there is no server. Accounts and check-ins are stored in your own browser and are never sent anywhere.</p>
+          <p>MindMetrics is not a medical tool. If stress feels unmanageable, please talk to a friend, a mentor or your campus counsellor.</p>
+        </section>
+        <section class="card span-all" style="grid-column:1/-1">
+          <h2>The team</h2>
+          <div class="team-grid">
+            <div class="member"><div class="avatar">T1</div><h3>Team member 1</h3><p>Role, e.g. UI design</p></div>
+            <div class="member"><div class="avatar">T2</div><h3>Team member 2</h3><p>Role, e.g. JavaScript logic</p></div>
+            <div class="member"><div class="avatar">T3</div><h3>Team member 3</h3><p>Role, e.g. testing</p></div>
+            <div class="member"><div class="avatar">T4</div><h3>Team member 4</h3><p>Role, e.g. documentation</p></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

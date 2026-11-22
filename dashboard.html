@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | MindMetrics</title>
+  <meta name="description" content="Your weekly and monthly stress score, trends and deadlines.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1><span id="welcome-prefix">Welcome back</span>, <span id="welcome-name">friend</span></h1>
+        <p class="lead">Here is how your week and month are looking.</p>
+      </div>
+    </section>
+    <div class="container page-content">
+      <div class="grid-12">
+        <section class="card span-8" aria-labelledby="trend-title">
+          <div class="card-head">
+            <h2 id="trend-title">Stress score</h2>
+            <div class="tabs" role="tablist" aria-label="Time range">
+              <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="week">Weekly</button>
+              <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="month">Monthly</button>
+            </div>
+          </div>
+          <div id="panel-week" role="tabpanel">
+            <div class="score-row">
+              <div class="score-circle" id="w-score">--</div>
+              <div><div class="score-label" id="w-label">No data yet</div><p class="score-hint" id="w-hint"></p></div>
+            </div>
+            <div class="week-bars" id="w-bars" role="img" aria-label="Stress score for each day"></div>
+            <div class="stat-tiles" id="w-stats"></div>
+            <h3 class="table-title">Last 5 weeks</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th scope="col">Week</th><th scope="col">Check-ins</th><th scope="col">Score</th><th scope="col">Level</th><th scope="col">Sleep</th><th scope="col">Study</th><th scope="col">Change</th></tr></thead>
+                <tbody id="week-table-body"></tbody>
+              </table>
+            </div>
+            <p class="table-note">Lower is better. Change compares each row with the one before it.</p>
+          </div>
+          <div id="panel-month" role="tabpanel" hidden>
+            <div class="score-row">
+              <div class="score-circle" id="m-score">--</div>
+              <div><div class="score-label" id="m-label">No data yet</div><p class="score-hint" id="m-hint"></p></div>
+            </div>
+            <div class="week-bars" id="m-bars" role="img" aria-label="Stress score for each day"></div>
+            <div class="stat-tiles" id="m-stats"></div>
+            <h3 class="table-title">Last 3 months</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th scope="col">Month</th><th scope="col">Check-ins</th><th scope="col">Score</th><th scope="col">Level</th><th scope="col">Sleep</th><th scope="col">Study</th><th scope="col">Change</th></tr></thead>
+                <tbody id="month-table-body"></tbody>
+              </table>
+            </div>
+            <p class="table-note">Lower is better. Change compares each row with the one before it.</p>
+          </div>
+        </section>
+
+        <div class="span-4 stack">
+          <section class="card" aria-labelledby="dl-title-h">
+            <div class="card-head"><h2 id="dl-title-h">Deadlines</h2><span class="chip" id="deadline-count">0 open</span></div>
+            <ul class="deadline-list" id="deadline-list"></ul>
+            <form class="add-form" id="deadline-form">
+              <label class="field" for="dl-title">Add a deadline</label>
+              <input type="text" id="dl-title" placeholder="e.g. Physics lab report" maxlength="80">
+              <div class="row"><input type="date" id="dl-date" aria-label="Due date"><button class="btn" type="submit">Add</button></div>
+            </form>
+          </section>
+
+          <section class="card soft" aria-labelledby="tip-h">
+            <h2 id="tip-h">Tip for today</h2>
+            <span class="tip-theme" id="tip-theme">Focus</span>
+            <p class="tip-text" id="tip-text"></p>
+            <div class="btn-row"><button class="btn small" type="button" id="new-tip-btn">Another tip</button><a class="btn small secondary" href="tips.html">Browse all</a></div>
+            <p class="muted-note" id="tip-count"></p>
+          </section>
+        </div>
+
+        <section class="card span-12">
+          <div class="card-head">
+            <div><h2>Try it with sample data</h2><p class="muted">Fills the last 110 days with example check-ins so you can see the charts working.</p></div>
+            <div class="btn-row"><button class="btn secondary" type="button" id="demo-load-btn">Load sample data</button><button class="btn danger" type="button" id="demo-clear-btn">Clear my data</button></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/tips.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

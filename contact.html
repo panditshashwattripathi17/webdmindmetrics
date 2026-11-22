@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | MindMetrics</title>
+  <meta name="description" content="Send feedback or a bug report to the MindMetrics team.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact us</h1>
+      <p class="lead">Found a bug or have an idea? Tell us. We read everything the team can reach.</p>
+    </div>
+  </section>
+    <div class="container page-content">
+      <div class="contact-layout">
+        <div class="stack">
+          <section class="card" aria-labelledby="msg-h">
+            <div id="contact-form-wrap">
+              <h2 id="msg-h">Send a message</h2>
+              <form id="contact-form" novalidate>
+                <div class="field-group"><label class="field" for="c-name">Name</label><input type="text" id="c-name" autocomplete="name"><p class="field-error" id="err-c-name"></p></div>
+                <div class="field-group"><label class="field" for="c-email">Email</label><input type="email" id="c-email" autocomplete="email"><p class="field-error" id="err-c-email"></p></div>
+                <div class="field-group"><label class="field" for="c-topic">Topic</label>
+                  <select id="c-topic"><option value="">Choose a topic</option><option>Bug report</option><option>Feature idea</option><option>Question</option><option>Other</option></select>
+                  <p class="field-error" id="err-c-topic"></p></div>
+                <div class="field-group"><label class="field" for="c-message">Message</label><textarea id="c-message" maxlength="520"></textarea><div class="counter" id="msg-count">0 / 500</div><p class="field-error" id="err-c-message"></p></div>
+                <button type="submit" class="btn">Send message</button>
+              </form>
+            </div>
+            <div class="success-panel" id="contact-success" hidden>
+              <div class="success-mark" aria-hidden="true">✓</div>
+              <h2>Message saved</h2>
+              <p class="muted">Thanks. Because this is a front-end project, your message is saved in this browser only and is not emailed.</p>
+              <p style="margin-top:1.2rem"><button type="button" class="btn secondary" id="send-another">Write another</button></p>
+            </div>
+          </section>
+          <section class="card" id="sent-card" hidden>
+            <div class="card-head"><h2>Your saved messages</h2><button type="button" class="btn small danger" id="sent-clear">Clear</button></div>
+            <ul class="sent-list" id="sent-list"></ul>
+          </section>
+        </div>
+        <section class="card faq" aria-labelledby="faq-h">
+          <h2 id="faq-h">Quick answers</h2>
+          <details><summary>Where is my data stored?</summary><p>In your browser's localStorage. Clearing site data or switching browsers starts you fresh.</p></details>
+          <details><summary>Why can't I see my data on another device?</summary><p>There is no server, so nothing syncs. Each browser keeps its own copy.</p></details>
+          <details><summary>How is the stress score worked out?</summary><p>It combines stress, mood, sleep, workload, energy and exercise. The About page lists the weights.</p></details>
+          <details><summary>Is this medical advice?</summary><p>No. It is a self-tracking tool for students. For real concerns, talk to a professional.</p></details>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindMetrics | Catch stress before it catches you</title>
+  <meta name="description" content="A student study-balance companion: daily check-in, focus timer, stress score and tips.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-icons" aria-hidden="true">
+          <span class="icon-tile sun">🧠</span><span class="hero-plus">+</span><span class="icon-tile white">⏱️</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Catch stress before it catches you.</h1>
+            <p class="hero-lead">A daily check-in, a focus timer and a week-by-week view of how you are really doing.</p>
+            <div class="hero-cta">
+              <a class="btn sun" href="login.html#signup" data-guest-only>Create free account</a>
+              <a class="link-light" href="login.html" data-guest-only>I already have one</a>
+              <a class="btn sun" href="dashboard.html" data-auth-only hidden>Open your dashboard</a>
+              <a class="link-light" href="checkin.html" data-auth-only hidden>Do today's check-in</a>
+            </div>
+            <p class="hero-note">No downloads. Everything is saved in your own browser.</p>
+          </div>
+          <div class="hero-preview" role="region" aria-label="Preview of MindMetrics">
+            <div class="preview-card">
+              <div class="preview-bar"><i></i><i></i><i></i><span>mindmetrics</span></div>
+              <div class="preview-slides">
+                <div class="preview-slide active">
+                  <div class="pv-title">Your week</div>
+                  <div class="pv-row">
+                    <div class="pv-ring">48</div>
+                    <div><div class="pv-label">Moderate stress</div><div class="pv-sub">Down 6 points from last week</div></div>
+                  </div>
+                  <div class="pv-bars" aria-hidden="true"><i style="height:45%"></i><i class="m" style="height:62%"></i><i class="m" style="height:70%"></i><i class="h" style="height:88%"></i><i class="m" style="height:58%"></i><i style="height:36%"></i><i style="height:30%"></i></div>
+                </div>
+                <div class="preview-slide">
+                  <div class="pv-title">Focus timer</div>
+                  <div class="pv-time">24:12</div>
+                  <div class="pv-pills"><span>25 min</span><span class="on">50 min</span><span>1 h 30</span></div>
+                  <div class="pv-track"><i></i></div>
+                </div>
+                <div class="preview-slide">
+                  <div class="pv-title">Daily check-in</div>
+                  <div class="pv-moods" aria-hidden="true"><span>😌</span><span class="on">😐</span><span>😣</span></div>
+                  <div class="pv-slider">Stress<i style="--w:55%"></i></div>
+                  <div class="pv-slider">Sleep<i style="--w:70%"></i></div>
+                  <div class="pv-slider">Workload<i style="--w:80%"></i></div>
+                </div>
+              </div>
+            </div>
+            <button class="preview-next" id="preview-next" type="button" aria-label="Show next preview">›</button>
+            <div class="preview-dots" id="preview-dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <h2 class="section-title">Three minutes a day is enough.</h2>
+        <p class="section-lead">The loop is short on purpose, so you will actually keep doing it.</p>
+        <ol class="steps">
+          <li><div class="step-num">1</div><h3>Check in</h3><p>Pick a mood and move six sliders: stress, energy, workload, sleep, study hours and exercise.</p></li>
+          <li><div class="step-num">2</div><h3>See your score</h3><p>You get a 0–100 stress score with a breakdown of what pushed it up or down.</p></li>
+          <li><div class="step-num">3</div><h3>Adjust your week</h3><p>Spot patterns in the weekly and monthly tables, then plan study blocks and breaks around them.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container feature-layout">
+        <div>
+          <h2 class="section-title">Everything for a balanced study week.</h2>
+          <p class="section-lead">Four small tools that work together and share one account.</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature"><div class="feature-icon" aria-hidden="true">📊</div><div><h3>Dashboard</h3><p>Weekly and monthly scores, trend tables and your deadline list.</p><a href="dashboard.html">Open dashboard</a></div></div>
+          <div class="feature"><div class="feature-icon" aria-hidden="true">⏱️</div><div><h3>Focus timer</h3><p>25, 50 or 90 minute sessions with a break that fits the length.</p><a href="timer.html">Start a session</a></div></div>
+          <div class="feature"><div class="feature-icon" aria-hidden="true">📝</div><div><h3>Daily check-in</h3><p>Numbers, not guesses, with advice based on what you entered.</p><a href="checkin.html">Check in now</a></div></div>
+          <div class="feature"><div class="feature-icon" aria-hidden="true">💡</div><div><h3>Tips library</h3><p>500 short tips. Search them, filter by theme and save your favourites.</p><a href="tips.html">Browse tips</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-wrap">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <h2>Start with today's check-in.</h2>
+            <p>Create an account in under a minute. It lives in your browser, so there is nothing to install.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn sun" href="login.html#signup" data-guest-only>Create free account</a>
+            <a class="btn sun" href="checkin.html" data-auth-only hidden>Do today's check-in</a>
+            <a class="btn white" href="tips.html">Browse tips</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

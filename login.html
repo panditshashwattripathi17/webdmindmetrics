@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in | MindMetrics</title>
+  <meta name="description" content="Log in or create a MindMetrics account.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main" class="auth-hero">
+    <div class="container auth-grid">
+      <div>
+        <h1>Your week, at a glance.</h1>
+        <p class="lead">Log in to see your stress score, run a focus session and keep your deadlines in one place.</p>
+        <ul class="auth-points">
+          <li>✓ Free, with no downloads</li>
+          <li>✓ Your data stays in this browser</li>
+          <li>✓ Works on phone and laptop</li>
+        </ul>
+      </div>
+      <div class="card auth-card">
+        <div class="tabs" role="tablist" aria-label="Account">
+          <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="login">Log in</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="signup">Sign up</button>
+        </div>
+        <p class="form-error" id="auth-error" role="alert" hidden></p>
+
+        <div id="panel-login" role="tabpanel">
+          <form id="login-form" novalidate>
+            <div class="field-group"><label class="field" for="login-email">Email</label><input type="email" id="login-email" autocomplete="email" required></div>
+            <div class="field-group"><label class="field" for="login-password">Password</label><input type="password" id="login-password" autocomplete="current-password" required></div>
+            <button class="btn full" type="submit">Log in</button>
+          </form>
+        </div>
+
+        <div id="panel-signup" role="tabpanel" hidden>
+          <form id="signup-form" novalidate>
+            <div class="field-group"><label class="field" for="signup-name">Your name</label><input type="text" id="signup-name" autocomplete="name" required></div>
+            <div class="field-group"><label class="field" for="signup-email">Email</label><input type="email" id="signup-email" autocomplete="email" required></div>
+            <div class="field-group"><label class="field" for="signup-password">Password (6+ characters)</label><input type="password" id="signup-password" autocomplete="new-password" required></div>
+            <div class="field-group"><label class="field" for="signup-confirm">Confirm password</label><input type="password" id="signup-confirm" autocomplete="new-password" required></div>
+            <button class="btn full" type="submit">Create account</button>
+          </form>
+        </div>
+        <p class="auth-note">Demo login for a front-end project. Accounts are stored only in this browser, so use a throwaway password.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

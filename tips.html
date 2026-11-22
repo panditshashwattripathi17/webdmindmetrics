@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips library | MindMetrics</title>
+  <meta name="description" content="Search and filter 500 wellness and study tips.">
+  <meta name="theme-color" content="#2756d6">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tips">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="timer.html">Timer</a></li>
+        <li><a href="checkin.html">Check-In</a></li>
+        <li><a href="tips.html" aria-current="page">Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="user-area" class="user-area"></div>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Tips library</h1>
+      <p class="lead">500 short tips for sleep, focus, habits and calm. Search them, filter by theme, and save the ones you like.</p>
+    </div>
+  </section>
+    <div class="container page-content">
+      <section class="card search-card" aria-label="Search and filter tips">
+        <div class="search-row">
+          <label class="sr-only" for="tip-search" style="position:absolute;left:-9999px">Search tips</label>
+          <input type="search" id="tip-search" placeholder="Search tips, e.g. “sleep” or “exam”" autocomplete="off">
+          <button type="button" class="icon-toggle" id="fav-toggle" aria-pressed="false">♥ Favourites (0)</button>
+        </div>
+        <div class="theme-chips" id="theme-chips" role="group" aria-label="Filter by theme"></div>
+      </section>
+      <div class="tips-toolbar"><p class="muted" id="tips-count" aria-live="polite"></p></div>
+      <ul class="tips-grid" id="tips-grid"></ul>
+      <div class="card empty-state" id="tips-empty" hidden>
+        <h3>No tips match that search</h3>
+        <p class="muted">Try a shorter word, pick “All”, or turn off Favourites.</p>
+        <p style="margin-top:1rem"><button type="button" class="btn" id="tips-reset">Clear filters</button></p>
+      </div>
+      <div class="more-row"><button type="button" class="btn secondary" id="tips-more">Show more</button></div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="" width="34" height="34"><span>MindMetrics</span></a>
+        <p>A study-balance companion for students. Check in, focus, and see how your week is really going.</p>
+      </div>
+      <div class="footer-links">
+        <a href="dashboard.html">Dashboard</a><a href="timer.html">Timer</a><a href="checkin.html">Check-In</a>
+        <a href="tips.html">Tips</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-note">Web Development mini-project · Bennett University. Your data stays in this browser. MindMetrics is a student tool, not medical advice.</p>
+    </div>
+  </footer>
+  <script src="js/tips.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
